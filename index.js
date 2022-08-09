@@ -1,27 +1,57 @@
 class Stack {
-    #list = [];
+    #list;
 
     constructor(initList) {
-        if (initList) this.#list = initList;
-    }
-     addBack(item) {
-        this.#list.push(item)       
+        this.#list = initList || [];
     }
 
-    addFront(item) {
-        this.#list.pop();
+    get count() {
+        return this.#list.length;
     }
 
-    addPeek(item) {
-        this.#list.peek();
+    push(item) {
+        this.#list.push(item);      
     }
+
+    // addFront(item) {
+    //     this.#list.pop(item);
+    // }
+    // addPeek(item) {
+    //     this.#list.peek(item);
+    // }
+    // get list() {
+    //     return this.#list.toString();
+    // }
 }
 
-const myStructure = new MyData (['joe', 'mary', 'mike']);
+// const myStructure = new Stack (['joe', 'mary', 'mike']);
 
-myStructure.addFront('magic');
+// console.log();
+// myStructure.push('magic');
+// console.log(myStructure);
 
+class Queue {
+    #list;
 
-class Queue {}
+    constructor(initList) {
+        this.#list = initList || [];
+    }
+
+    get count() {
+        return this.#list.length;
+    }
+
+    enqueue(item) {
+        this.#list.push(item);      
+    }
+
+    dequeue
+
+    get next() {
+        return this.#list[1];
+    }
+
+}
+
 
 module.exports = { Stack, Queue };
